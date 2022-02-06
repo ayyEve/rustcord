@@ -22,9 +22,8 @@ fn main() -> Result<(), io::Error> {
         .build();
 
     discord.update_presence(presence)?;
+    
     loop {
         discord.run_callbacks();
     }
-
-    Ok(())
 }
